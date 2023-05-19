@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 *
 {
     margin: 0;
@@ -73,20 +74,22 @@ body
     left: 170%;
 }
 
-.card .graph{
+.card .percent{
     position:relative;
     width: 50%;
-    left: 20%;
-    padding: 0px 20px 20px 40px;
+    left: 0%;
+    padding: 20px 20px 10px 20px;
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
+    font-size: 70px;
+    color: #2F58CD;
     
 }
 
-.card:hover .graph
+.card:hover .percent
 {
-    left: 0; 
+    left: 80px; 
     opacity: 1;
     visibility: visible;
 }
@@ -96,8 +99,9 @@ body
     position: absolute;
     height:360px; 
     width:360px;
-    vertical-align: bottom;
+    /* vertical-align: bottom; */
     z-index: -1;
+    align-items: flex-end;
 }
 .bg2
 {

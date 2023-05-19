@@ -66,12 +66,18 @@ body
     pointer-events: none;
     transition: 0.5s;
 }
-/* .card:hover .circle{
-    left: 50%;
-} */
+
+.card #curveChart
+{
+    visibility: hidden;
+}
+.card:hover #curveChart
+{
+    visibility: visible;
+}
 .card:hover img
 {
-    left: 170%;
+    left: 120%;
 }
 
 .card .percent{

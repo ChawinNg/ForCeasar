@@ -4,6 +4,7 @@ div{
 .graph{
    
     border: 10px solid coral;
+    background-color: 'transparent';
 }
 #curve_chart{
     width: 900px; 

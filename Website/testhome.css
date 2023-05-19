@@ -1,27 +1,74 @@
-body {
-    font-family: 'Alatsi', sans-serif;
+*
+{
     margin: 0;
-    overflow: hidden;
-    background: black;
-  }
-  
-  .container {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    min-height: 100vh;
+}
+
+.card
+{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    display: flex;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+}
+
+.card .circle
+{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .title {
-    font-size: 10vw;
-    color: white;
-  }
-  
-  canvas {
     width: 100%;
-  }
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card .circle::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #AEE2FF;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.card .circle:hover::before
+{
+    clip-path: circle(200px at center);
+}
+
+.card img
+{
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    height: 150px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card:hover img
+{
+    left: 120%;
+}
+
+.graph{
+    background-color: 'transparent';
+}

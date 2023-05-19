@@ -83,7 +83,7 @@ footer .wave#wave4
 }
 .card
 {
-    top: -250px;
+    top: -260px;
     position: relative;
     height: 400px;
     width: 400px;
@@ -143,6 +143,8 @@ footer .wave#wave4
 .card:hover img
 {
     left: 120%;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .card .percent{

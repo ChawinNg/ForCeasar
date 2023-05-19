@@ -1,5 +1,5 @@
 // Load the Visualization API and the corechart package.
-google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {'packages':['corechart', 'table', 'sankey']});
 
 // Set a callback to run when the Google Visualization API is loaded.
 
@@ -20,19 +20,32 @@ var data_array=[
 var options = {
     title: 'HUMIDITY vs TIME',
     curveType: 'function',
-    legend: { position: 'bottom' }
+    legend: { position: 'bottom' },
+    width:900,
+    height:300,
+    animation: {"startup": true}
 };
 function drawChart() {
-    data_array.push([(parseInt(data_array[data_array.length-1][0])+1).toString(),data_array[data_array.length-1][1]+1,data_array[data_array.length-1][2]+1])
     var data = google.visualization.arrayToDataTable(data_array);
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
     chart.draw(data, options);
+
+    google.visualization.events.addListener(chart, 'select', selectHandler);
+
+
 }
 
+function selectHandler(e) {
+  alert('A table row was selected');
+}
 
-var delayInMilliseconds = 1000; //1 second
-
-setTimeout(function() {
-  //your code to be executed after 1 second
-}, delayInMilliseconds);
+function addData(){
+  let size=data_array.length;
+  for(let i=1;i<size-1;i++){
+    data_array[i]=data_array[i+1];
+    console.log(data_array[i])
+  }
+  data_array[size-1]=[(parseInt(data_array[data_array.length-1][0])+1).toString(),data_array[data_array.length-1][1]+1000,data_array[data_array.length-1][2]+100]
+  drawChart()
+}

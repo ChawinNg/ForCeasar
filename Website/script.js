@@ -32,9 +32,8 @@ var options = {
     title: 'HUMIDITY vs TIME',
     curveType: 'function',
     legend: { position: 'bottom' },
-
-
 };
+
 function drawChart() {
     var data = google.visualization.arrayToDataTable(data_array);
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -47,19 +46,20 @@ function drawChart() {
 
 
 function addData(){
-  console.log(1351556)
+
   let size=data_array.length
-  let Humidity=10;
+  let Humidity=Math.random()*10;
 
 
   if(size<10){
       data_array.push([getTime(),Humidity])
   }
   else{
-    for(let i=0;i<size-1;i++){
+    console.log(6553)
+    for(let i=1;i<size-1;i++){
       data_array[i]=data_array[i+1]
     }
-    data_array.push(getTime(),Humidity)
+    data_array[size-1]=[getTime(),Humidity]
     
   }
   drawChart()

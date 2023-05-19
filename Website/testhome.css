@@ -65,9 +65,12 @@ body
     pointer-events: none;
     transition: 0.5s;
 }
+/* .card:hover .circle{
+    left: 50%;
+} */
 .card:hover img
 {
-    left: 120%;
+    left: 170%;
 }
 
 .card .graph{

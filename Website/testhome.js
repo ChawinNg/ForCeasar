@@ -16,7 +16,6 @@ var data_array=[
       ['2007',  1030,      540]
     ]
 
-
 var options = {
     title: 'HUMIDITY vs TIME',
     curveType: 'function',

@@ -12,6 +12,7 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #B5F1CC;
 }
 
 .card
@@ -47,9 +48,11 @@ body
     background: #AEE2FF;
     clip-path: circle(120px at center);
     transition: 0.5s;
+    border-style: solid;
+    border-color: #6DA9E4;
 }
 
-.card .circle:hover::before
+.card:hover .circle:before
 {
     clip-path: circle(200px at center);
 }
@@ -69,6 +72,21 @@ body
     left: 120%;
 }
 
-.graph{
-    background-color: 'transparent';
+.card .graph{
+    position:relative;
+    width: 50%;
+    left: 20%;
+    padding: 0px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    
 }
+
+.card:hover .graph
+{
+    left: 0; 
+    opacity: 1;
+    visibility: visible;
+}
+

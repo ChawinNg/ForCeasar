@@ -45,9 +45,9 @@ function drawChart() {
 }
 
 
-function addData(){
 
-  let size=data_array.length
+function addData(){
+let size=data_array.length
   let Humidity=Math.random()*10;
 
 

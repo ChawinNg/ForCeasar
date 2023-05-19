@@ -8,14 +8,25 @@ google.charts.setOnLoadCallback(drawChart);
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
 // draws it.
-var data_array=[
-      ['Year', 'Sales', 'Expenses'],
-      ['2004',  1000,      400],
-      ['2005',  1170,      460],
-      ['2006',  660,       1120],
-      ['2007',  1030,      540]
-    ]
+function addZero(i) {
+  if (i < 10) {i = "0" + i}
+  return i;
+}
 
+function getTime(){
+  const d = new Date();
+let h = addZero(d.getHours());
+let m = addZero(d.getMinutes());
+let s = addZero(d.getSeconds());
+let time = h + ":" + m + ":" + s;
+return time
+}
+
+
+var data_array=[
+      ['Time', 'Humidity'],
+      [getTime(),1]
+    ]
 
 var options = {
     title: 'HUMIDITY vs TIME',
@@ -34,10 +45,26 @@ function drawChart() {
 
 }
 
-function selectHandler(e) {
-  alert('A table row was selected');
-}
 
+function addData(){
+  console.log(1351556)
+  let size=data_array.length
+  let Humidity=10;
+
+
+  if(size<10){
+      data_array.push([getTime(),Humidity])
+  }
+  else{
+    for(let i=0;i<size-1;i++){
+      data_array[i]=data_array[i+1]
+    }
+    data_array.push(getTime(),Humidity)
+    
+  }
+  drawChart()
+
+}
 
 
 

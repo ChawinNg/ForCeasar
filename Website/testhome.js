@@ -27,7 +27,7 @@ function drawChart() {
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
     var chart2 = new google.visualization.PieChart(document.getElementById('myChart'));
     //chart.draw(data, options);
-    chart2.draw(data, options);
+    chart.draw(data, options);
 }
 
 

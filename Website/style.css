@@ -1,12 +1,4 @@
-div{
-     display: inline-block;
+#curve_chart{
+    width: 100vw; 
+    height: 100vh;
 }
-.graph{
-   
-    border: 10px solid coral;
-    background-color: 'transparent';
-}
-/* #curve_chart{
-    width: 900px; 
-    height: 500px;
-} */

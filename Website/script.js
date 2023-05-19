@@ -21,17 +21,16 @@ var options = {
     title: 'HUMIDITY vs TIME',
     curveType: 'function',
     legend: { position: 'bottom' },
-    width:900,
-    height:300,
-    animation: {"startup": true}
+
+
 };
 function drawChart() {
     var data = google.visualization.arrayToDataTable(data_array);
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-    var chart2 = new google.visualization.PieChart(document.getElementById('myChart'));
+    // var chart2 = new google.visualization.PieChart(document.getElementById('myChart'));
     chart.draw(data, options);
 
-    chart2.draw(data, options);
+    // chart2.draw(data, options);
 
 }
 
@@ -40,5 +39,5 @@ function selectHandler(e) {
 }
 
 
-var delayInMilliseconds = 1000; //1 second
+
 

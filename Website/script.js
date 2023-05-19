@@ -30,23 +30,26 @@ var data_array=[
     ]
 
 var options = {
-    title: 'HUMIDITY vs TIME',
+    
     curveType: 'function',
     legend: { position: 'bottom' },
+    hAxis: {
+      title: 'Time',
+      logScale: false
+    },
+    vAxis: {
+      title: 'HUmidity',
+      logScale: false
+    },
     
 };
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable(data_array);
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-    // var chart2 = new google.visualization.PieChart(document.getElementById('myChart'));
+    
     chart.draw(data, options);
-
-    // chart2.draw(data, options);
-
 }
-
-
 
 function addData(){
 let size=data_array.length
@@ -66,6 +69,10 @@ let size=data_array.length
   }
   drawChart()
 
+}
+
+function getcurrentHumidity(){
+  return data_array[data_array.length-1][1]
 }
 
 

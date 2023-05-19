@@ -22,16 +22,18 @@ let time = h + ":" + m + ":" + s;
 return time
 }
 
+let Threshold=3;
 
 var data_array=[
-      ['Time', 'Humidity'],
-      [getTime(),1]
+      ['Time', 'Humidity','Threshold'],
+      [getTime(),1,Threshold]
     ]
 
 var options = {
     title: 'HUMIDITY vs TIME',
     curveType: 'function',
     legend: { position: 'bottom' },
+    
 };
 
 function drawChart() {
@@ -52,14 +54,14 @@ let size=data_array.length
 
 
   if(size<10){
-      data_array.push([getTime(),Humidity])
+      data_array.push([getTime(),Humidity,Threshold])
   }
   else{
     console.log(6553)
     for(let i=1;i<size-1;i++){
       data_array[i]=data_array[i+1]
     }
-    data_array[size-1]=[getTime(),Humidity]
+    data_array[size-1]=[getTime(),Humidity,Threshold]
     
   }
   drawChart()

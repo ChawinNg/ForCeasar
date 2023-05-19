@@ -48,8 +48,6 @@ body
     background: #AEE2FF;
     clip-path: circle(120px at center);
     transition: 0.5s;
-    border-style: solid;
-    border-color: #6DA9E4;
 }
 
 .card:hover .circle:before
@@ -57,7 +55,7 @@ body
     clip-path: circle(200px at center);
 }
 
-.card img
+.card img 
 {
     position: absolute;
     top: 14%;
@@ -90,3 +88,20 @@ body
     visibility: visible;
 }
 
+.bg img
+{
+    position: absolute;
+    height:360px; 
+    width:360px;
+    vertical-align: bottom;
+    z-index: -1;
+}
+.bg2
+{
+    position: absolute;
+    height:360px; 
+    width:360px;
+    vertical-align: bottom;
+    z-index: -1;
+    text-align: left;
+}

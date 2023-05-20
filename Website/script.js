@@ -26,7 +26,7 @@ let Threshold=3;
 
 var data_array=[
       ['Time', 'Humidity','Threshold'],
-      [getTime(),1,Threshold]
+      [getTime(),0,Threshold]
     ]
 
 var options = {
@@ -38,7 +38,7 @@ var options = {
       logScale: false
     },
     vAxis: {
-      title: 'HUmidity',
+      title: 'Humidity',
       logScale: false
     },
     
@@ -72,7 +72,8 @@ let size=data_array.length
 }
 
 function getcurrentHumidity(){
-  return data_array[data_array.length-1][1]
+  document.querySelector('h2').innerText=(data_array[data_array.length-1][1]-1)+'%'
+  
 }
 
 

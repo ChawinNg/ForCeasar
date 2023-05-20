@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="testhome.css">
   </head>
   <body>
-    <div class="card" onclick="document.location='webisweb.html'">
+    <div class="card" onmouseenter="myFunction()" onmouseleave="myFunction()"  onclick="document.location='webisweb.html'">
+
+      <span class="popuptext" id="myPopup">Click to see full data!</span>
+
         <div class="circle"></div>
         <div class="percent">
             <h2>30%</h2>

@@ -3,18 +3,12 @@ function myFunction() {
   popup.classList.toggle("show");
 }
 
-function getValue( ){
-    for(var i=0;i<101;i++){
-      return 49;
-    }
+async function circlePercent(){
+  fetch("http://192.168.43.154/")
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById("num").innerHTML= res.humidity+"%";
+    });
 }
 
-function circlePercent(){
-  var x = 100;
-  document.getElementById("num").innerHTML= x+"%";
-}
-
-function bgColor(){
-  document.body.style.backgroundColor = "#FF6969";
-}
 

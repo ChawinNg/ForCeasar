@@ -11,4 +11,5 @@ async function circlePercent(){
     });
 }
 
+setInterval(circlePercent, 1000);
 

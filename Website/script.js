@@ -26,7 +26,7 @@ let Threshold=3;
 
 var data_array=[
       ['Time', 'Humidity'],
-      [getTime(),0]
+      [getTime(), 0]
     ]
 
 var options = {
@@ -51,9 +51,27 @@ function drawChart() {
     chart.draw(data, options);
 }
 
-function addData(){
+function loadData() {
+  // fetch("http://192.168.43.154/history")
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       console.log(res.humidity);
+  //       for (let i = res.humidity.length - 1; i >= 0; i--) {
+  //         addData(res.humidity[i]);
+  //       }
+  //     });
+
+  setInterval(() => {
+    fetch("http://192.168.43.154/")
+        .then(res => res.json())
+        .then(res => {
+            addData(res.humidity);
+        });
+  }, 1000);
+}
+
+function addData(Humidity){
 let size=data_array.length
-  let Humidity=Math.random()*10;
 
 
   if(size<10){

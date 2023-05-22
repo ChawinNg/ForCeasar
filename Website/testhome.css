@@ -14,6 +14,9 @@ body
     align-items: flex-end;
     min-height: 100vh;
     background-color: #B5F1CC;
+    animation: image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+    animation:image 10s infinite alternate;
 }
 footer{
     position: absolute;
@@ -148,6 +151,7 @@ footer .wave#wave4
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
+    cursor: pointer;
 }
 .card #circle::before
 {
@@ -233,6 +237,21 @@ footer .wave#wave4
     text-align: left;
 }
 
-.bg-color {
-    background-color:red;
-  } 
+@keyframes image{
+    0%{
+background-color:#CFFF8D;
+}
+25%{
+    background-color:#A8E890;
+}
+50%{
+    background-color:#749F82;
+}
+75%{
+
+    background-color:#367E18;
+}
+100%{
+    background-color:#1C6758;
+    }
+} 

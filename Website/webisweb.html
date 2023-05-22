@@ -4,31 +4,29 @@
     <title>Plant waterer</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
     <div class="header">
         <div class="buttons">
-            <!-- <button onclick="addData()">add</button> -->
             <button class="back" onclick="document.location='testhome.html'">&larr;</button>
-    
         </div>
         <div class="graph_title">
             <h1>Humidity vs Time</h1>
-
         </div>
-        
     </div>
-    
-
-    <div id="curve_chart">
-        
+    <div id="curve_chart"></div>
+    <div>
+        <button type="button" class="add" onclick="addData()">
+            <span id="add_icon">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </span>
+        </button>
     </div>
-   
-    
-    
-
 </body>
 
 </html>

@@ -29,7 +29,7 @@ body{
     border: 0px;
     background-color: white;
     position: relative;
-
+    cursor: pointer;
 }
 .graph_title{
     width: 100vw;
@@ -43,8 +43,20 @@ h1{
 
 #curve_chart{
     width: 100vw; 
-    height: 85vh;
+    height: 70vh;
     /* border: 1px solid black; */
 }
 
+.add{
+    position: absolute;
+    bottom: 6vw;
+    right: 15vw;
+    border:0px;
+    background-color: white;
+    cursor: pointer;
+}
+
+ion-icon {
+    font-size: 64px;
+}
 

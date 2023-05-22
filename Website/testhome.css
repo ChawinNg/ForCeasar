@@ -193,7 +193,7 @@ footer .wave#wave4
     opacity: 0;
 }
 
-.card .percent{
+.card #percent{
     position:relative;
     width: 50%;
     left: 0%;
@@ -206,7 +206,7 @@ footer .wave#wave4
     
 }
 
-.card:hover .percent
+.card:hover #percent
 {
     left: 80px; 
     opacity: 1;

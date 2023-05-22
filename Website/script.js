@@ -25,8 +25,8 @@ return time
 let Threshold=3;
 
 var data_array=[
-      ['Time', 'Humidity','Threshold'],
-      [getTime(),0,Threshold]
+      ['Time', 'Humidity'],
+      [getTime(),0]
     ]
 
 var options = {
@@ -57,14 +57,14 @@ let size=data_array.length
 
 
   if(size<10){
-      data_array.push([getTime(),Humidity,Threshold])
+      data_array.push([getTime(),Humidity])
   }
   else{
     console.log(6553)
     for(let i=1;i<size-1;i++){
       data_array[i]=data_array[i+1]
     }
-    data_array[size-1]=[getTime(),Humidity,Threshold]
+    data_array[size-1]=[getTime(),Humidity]
     
   }
   drawChart()

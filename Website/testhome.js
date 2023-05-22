@@ -13,7 +13,7 @@ function getValue( ){
 }
 
 function circleColor(){
-  var x = getValue();
+  var x = 0;
   document.getElementById("num").innerHTML= x;
 }
 

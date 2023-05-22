@@ -139,7 +139,7 @@ footer .wave#wave4
     to {opacity:1 ;}
 } 
 
-.card .circle
+.card #circle
 {
     position: absolute;
     top: 0;
@@ -149,7 +149,7 @@ footer .wave#wave4
     border-radius: 20px;
     overflow: hidden;
 }
-.card .circle::before
+.card #circle::before
 {
     content: '';
     position: absolute;
@@ -162,7 +162,7 @@ footer .wave#wave4
     transition: 0.5s;
 }
 
-.card:hover .circle:before
+.card:hover #circle:before
 {
     clip-path: circle(200px at center);
 }
@@ -232,3 +232,7 @@ footer .wave#wave4
     z-index: -1;
     text-align: left;
 }
+
+.bg-color {
+    background-color:red;
+  } 

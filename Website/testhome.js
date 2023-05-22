@@ -13,8 +13,8 @@ function getValue( ){
 }
 
 function circleColor(){
-  var x = 0;
-  document.getElementById("num").innerHTML= x;
+  var x = 100;
+  document.getElementById("num").innerHTML= x+"%";
 }
 
 setInterval(circleColor(),1000);

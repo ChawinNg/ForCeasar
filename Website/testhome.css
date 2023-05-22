@@ -197,7 +197,8 @@ footer .wave#wave4
     position:relative;
     width: 50%;
     left: 0%;
-    padding: 20px 20px 10px 20px;
+    /* padding: 20px 20px 10px 20px; */
+    text-align: center;
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
@@ -208,11 +209,10 @@ footer .wave#wave4
 
 .card:hover #percent
 {
-    left: 80px; 
+    left: 90px; 
     opacity: 1;
     visibility: visible;
 }
-
 
 .bg img
 {

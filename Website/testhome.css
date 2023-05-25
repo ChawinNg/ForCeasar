@@ -205,7 +205,7 @@ footer .wave#wave4
 }
 .card:hover img
 {
-    top: 120%;
+    top: 100%;
     visibility: hidden;
     opacity: 0;
 }
